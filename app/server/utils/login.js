@@ -1,6 +1,5 @@
 var https = require('https');
 var qs = require('querystring');
-var _ = require('lodash');
 
 var whitelist = [
   {
