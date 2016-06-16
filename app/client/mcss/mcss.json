@@ -1,0 +1,7 @@
+{
+  "input": "./index.mcss",  
+  "output": "../../../public/css",
+  "format": 3,
+  "exclude": "(\\\\|\\/)_",
+  "include": ["../components", "../../../node_modules"]
+}

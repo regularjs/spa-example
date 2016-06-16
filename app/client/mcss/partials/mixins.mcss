@@ -1,0 +1,12 @@
+// 根据输入颜色，自动设置hover，active的状态
+// example: 
+//  $state-color: #ccc;
+$state-color = ($color, $percent = 5%, $prop=color){
+  #{$prop}: $color;
+  &:hover{
+    #{$prop}: l-adjust($color, $percent);
+  }
+  &:active{
+    #{$prop}: l-adjust($color, -$percent);
+  }
+}

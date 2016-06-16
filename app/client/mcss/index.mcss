@@ -1,0 +1,88 @@
+
+
+@import 'partials/config';
+@import 'http://nec.netease.com/download/framework/mass/mass/index.mcss';
+
+@import 'partials/fixboot';
+@import 'partials/grid';
+@import 'partials/module';
+
+
+body{
+  background-color: $side-bg;
+  font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
+  font-size: 14px;
+}
+
+
+.m-login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+
+  .login-header, p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+  /* The triangle form is achieved by a CSS hack */
+  .login-triangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: $brand-primary;
+  }
+
+  .login-header {
+    background: $brand-primary;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .login-container {
+    background: #ebebeb;
+    padding: 12px;
+    $box-shadow: 0px 2px 10px rgba(#000, .6);
+  }
+
+  /* Every row inside .login-container is defined with p tags */
+  p {
+    padding: 12px;
+  }
+
+  input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+
+  /* Text fields' focus effect */
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: $brand-primary;
+
+  }
+
+}
+
+
+

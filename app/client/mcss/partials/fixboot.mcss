@@ -1,0 +1,158 @@
+// bootstrap fixed
+
+// 
+.form-control{
+  border-radius: 0;
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+
+label{
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+
+.form-control-sm{
+  font-size: 12px;
+  height: 28px;
+  padding: 4px   8px;
+
+}
+select.form-control-sm{
+  height: 24px;
+  font-size: 14px;
+  padding: 1px   4px;
+
+}
+
+input.form-control-fix1{
+  max-width: 120px;
+}
+
+
+.input-group-addon{
+    border-radius: 0;
+}
+.input-group-fix1{
+  max-width: 182px;
+  min-width: 100px;
+}
+
+.control-label-ct{
+  text-align: center;
+}
+
+// btn
+
+.btn{
+    border-radius: 0;
+}
+
+.btn-dft{
+  background-color: #eee;
+}
+
+.btn-inverse{
+  $state-color($brand-inverse, $prop = background-color);
+  &, &:hover, &:active{
+    color: #fff;
+  }
+}
+
+.btn-fix1{
+  width: 180px;
+}
+
+
+.table{
+  .th-xl{
+    width: 200px;
+  }
+}
+
+.table-card{
+  margin-top: 24px;
+  thead{
+    th{
+      text-align: center;
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      &:first-child{
+        $border-radius: 14px, top left;
+      }
+    }
+  }
+  tbody{
+    border: 1px solid #ddd;
+  }
+  
+
+}
+
+
+.hr-dashed{
+   border-top: 1px dashed #e7eaec;
+   color: #ffffff;
+   background-color: #ffffff;
+   height: 1px;
+   margin: 20px 0; 
+}
+
+// pagation
+// 
+.pagination > li:last-child > a, 
+.pagination > li:last-child > span {
+  border-radius: 0;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+  border-radius: 0;
+}
+
+
+
+.col-s1{
+  width: 24px;
+}
+
+.td-group{
+  div, span{
+    word-break:break-all;
+  }  
+  input{
+    max-width: 60px;
+  }
+}
+
+$fadeInY();
+$fadeIn();
+$fadeOut();
+$fadeOutY();
+
+.modal{
+  .modal-body{
+    max-height: t('calc(100vh - 240px )');
+    overflow-y: auto;
+  }
+}
+
+.progress-fix{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10px;
+  z-index: 1040;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  opacity: 0.9;
+
+}
+
+.glyphicon-remove{
+  cursor: pointer;
+}

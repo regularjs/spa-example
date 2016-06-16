@@ -1,0 +1,4 @@
+
+var Mask = Regular.extend({
+  
+});

@@ -1,0 +1,79 @@
+{
+  "name": "regularjs-ssr-routing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build --production",
+    "buildcss": "mcss -c app/client/mcss/mcss.json",
+    "dev": "devtool -w ./app -- app/server/app.js",
+    "start": "node app/server/app.js",
+    "stop": "pkill YOUDATA_BACKEND"
+  },
+  "author": "neteasefed",
+  "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "fetch-ie8": "^1.4.2",
+    "koa-session": "^3.3.1",
+    "ua-parser-js": "^0.7.10"
+  },
+  "devDependencies": {
+    "co": "^4.6.0",
+    "babel-loader": "^5.2.0",
+    "babel-register": "^6.7.2",
+    "boom": "^3.1.2",
+    "bootstrap": "^3.3.6",
+    "co-body": "^4.0.0",
+    "copy-webpack-plugin": "^1.1.1",
+    "ejs": "^2.4.1",
+    "eslint": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "gulp-webpack": "^1.5.0",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-ejs": "^3.0.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "lodash": "^4.11.1",
+    "mcss": "^0.5.1",
+    "mcss-gulp": "^1.0.0",
+    "nodemon": "^1.9.1",
+    "raw-loader": "^0.5.1",
+    "regular-state": "regularjs/regular-state#ssr",
+    "regularjs": "regularjs/regular#ssr",
+    "through2": "^2.0.1",
+    "webpack": "~1.12.9",
+    "whatwg-fetch": "^0.10.1",
+    "yargs": "^4.6.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "globals": {
+      "Regular": true
+    },
+    "rules": {
+      "camelcase": 2,
+      "brace-style": [
+        2,
+        "1tbs"
+      ],
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  }
+}

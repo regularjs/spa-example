@@ -1,0 +1,295 @@
+
+
+.u-logo{
+  text-align: center;
+  margin: 40px;
+  img{
+    $size: 80px;
+    border: 3px solid $gray-lighter;
+    border-radius: 50%;
+  }
+}
+// main header in .g-bd
+
+.m-snav{
+  z-index: 2;
+  h4{
+    position: relative;
+    $lh: 42px;
+    font-size: 16px;
+    padding-left: 40px;
+    margin:0;
+    background-color: l-adjust($side-bg, 10%);
+    border-top: 1px solid l-adjust($side-bg, 15%);
+    border-bottom: 1px solid l-adjust($side-bg, -12%);
+    margin-right: -8px;
+    &::after{
+      position: absolute;
+      content:"";
+      right: 0px;
+      bottom: -8px;
+      $size: 0px;
+      $border: 4px solid l-adjust($side-bg, -12%); 
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+
+    }
+  }
+  .glyphicon{
+    width: 25px;
+    position: relative;
+    top: 2px;
+  }
+  .snav_item{
+    border-top: 1px solid l-adjust($side-bg, 6%);
+    border-bottom: 1px solid l-adjust($side-bg, -6%);
+    > a{
+      font-size: 14px;
+      border-left: 3px solid transparent;
+    }
+    .nav{
+      display: none;
+    }
+     &.active .nav,&.open .nav{
+      display: block;
+    }
+    &.open > a, > a:hover{
+      background-color: l-adjust($side-bg, 4%);
+      border-left-color: #3d4a5e;
+    }
+    &.active > a, > a:hover{
+      color: #fff;
+      background-color: l-adjust($side-bg, 4%);
+      border-left-color: $brand-primary;
+    }
+    &.active > a, > a:active{
+      border-left-color: $brand-primary;
+    }
+    li{
+      a{
+        padding-left: 50px;
+        background-color: #463252;
+        color: #fff;
+        &:hover{
+          color: $brand-primary;
+        }
+      }
+
+
+      &.active a{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+
+$head-height = 48px;
+.m-header{
+  .breadcrumb{
+    float: left;
+    margin-bottom: 0;
+  }
+  height: $head-height;
+  border-bottom: 3px solid #bbb;
+  a{
+    height: $head-height - 3px;
+    $state-color: $gray-light;
+    &:hover{
+      background-color: #fff;
+    }
+  }
+  .glyphicon{
+    margin-right: 6px;
+  }
+}
+
+
+$bar-height = 48px;
+.m-card{
+  margin-top: 12px;
+  background-color: #fff;
+  $border-radius: 3px;
+  $box-shadow: 0px 1px 1px rgba(#ddd, 0.6);
+  border: 1px solid $gray-lighter;
+  .card_b{
+    height: $bar-height;
+    padding: 14px 15px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    background-color: $gray;
+    color: #fff;
+    font-size: 16px;
+  }
+  // card bar 不同颜色
+  .card_b-primary{
+    background-color: $brand-inverse;
+  }
+  .card_b-primary{
+    background-color: $brand-primary;
+  }
+  .card_c{
+    padding: 10px 15px;
+  }
+}
+
+.m-card-bread{
+  padding: 4px 0px;
+  .breadcrumb{
+    background-color: transparent;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
+
+
+.u-godipt{
+	width: 400px;
+	min-height: 400px;
+	padding: 8px;
+	border: 1px solid #ddd;
+	font-family:  Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	background-color: #fafafa;
+	font-size: 12px;
+	line-height: 1.5;
+	&:focus{
+		border-color: $brand-inverse;
+		box-shadow: 0px 0px 2px rgba($brand-inverse, .4);
+
+		&::-webkit-scrollbar {width:4px;}
+	}
+
+	&::-webkit-scrollbar {width:0px;height:8px;}
+
+}
+
+
+$notify-theme = ($color){
+  color: #fff;
+  border: l-adjust($color, -5%);
+  background-color: l-adjust($color, +12%);
+}
+.m-notify{
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  min-width: 240px;
+  z-index: 1050 + 1;
+  .notify_close{
+    cursor: pointer;
+    position: absolute;
+    font-size: 16px;
+    top: 6px;
+    right: 6px;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+  .notify{
+    position: relative;
+    margin: $padding-base-vertical $padding-base-horizontal;
+    padding: $padding-base-vertical $padding-base-horizontal $padding-base-vertical 32px + 8px ;
+    $border-radius: 1px;
+    $box-shadow: 1px 1px 1px rgba(1,1,1,0.5);
+    $clearfix();
+    &:hover{
+      $box-shadow: 1px 1px 3px rgba(1,1,1,0.5);
+    }
+
+    p{
+      margin-top: 12px;
+    }
+
+    .glyphicon{
+      position: absolute;
+      $gsize = 32px;
+      $lh: $gsize;
+      top: 50%;
+      left: 12px;
+      margin-top: - ($gsize / 2);
+      font-size: 20px;
+      margin-right: 4px;
+    }
+
+    &-danger{
+      $notify-theme: $brand-danger;
+    }
+    &-info{
+      $notify-theme: $brand-info;
+    }
+    &-success{
+      $notify-theme: $brand-success;
+    }
+    &-warning{
+      $notify-theme: $brand-warning;
+    }
+
+  }
+}
+.m-notify-left{
+  left: 12px;
+  right: auto;
+}
+.m-notify-middle{
+  left: 50%;
+}
+
+
+// Copy from http://codepen.io/redlabor/pen/idHeG
+.u-loading {
+  text-align: center;
+  span {
+  display: inline-block;
+  vertical-align: middle;
+  width: .8em;
+  height: .8em;
+  margin: .19em;
+  background: #007DB6;
+  border-radius: .6em;
+  animation: loading 1s infinite alternate;
+}
+
+/* Can we use transition opacity instead of keyframes here? */
+  span:nth-of-type(2) {
+  background: #008FB2;
+  animation-delay: 0.2s;
+}
+  span:nth-of-type(3) {
+  background: #009B9E;
+  animation-delay: 0.4s;
+}
+  span:nth-of-type(4) {
+  background: #00A77D;
+  animation-delay: 0.6s;
+}
+  span:nth-of-type(5) {
+  background: #00B247;
+  animation-delay: 0.8s;
+}
+  span:nth-of-type(6) {
+  background: #5AB027;
+  animation-delay: 1.0s;
+}
+  span:nth-of-type(7) {
+  background: #A0B61E;
+  animation-delay: 1.2s;
+}
+h2 {
+  color: #999;
+  margin: 0;
+  font: 1.2em verdana;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+}
+
+$keyframes( loading, {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+});
+

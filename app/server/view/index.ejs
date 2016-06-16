@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DEMO-博客</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body>
+
+<div class="g-mn" id="app">
+  <%- renderString %>
+</div>
+
+<!-- first page data flush   -->
+<script>
+  <%- renderData %>
+</script>
+
+<script src='/bundle.js'></script>
+
+</body>
+</html>
