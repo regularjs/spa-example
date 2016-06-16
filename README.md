@@ -1,5 +1,6 @@
-# 服务端渲染的Regularjs的单页范例
+# 服务端渲染的单页应用范例
 
+A comprehensive Example for creating Single page application with regular-state 
 
 ## 目录介绍
 
