@@ -28,7 +28,7 @@ module.exports = Regular.extend({
 
     var data = this.data;
     service.login(data.username, data.password).then( ()=>{
-      location.href='/'
+      location.href='/poster'
     })['catch'](function( err ){
       console.log(err)
       throw err
