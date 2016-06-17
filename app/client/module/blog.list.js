@@ -7,7 +7,7 @@ var tpl = `
   <h2 class="sub-header">Bloging List <a  r-link='app.blog.edit({id:-1})' class='btn btn-primary'>(Add a blog)</a></h2>
 <div class="table-responsive">
 
-<pager total={total} linkTemplate={linkTemplate} current={page} on-nav={this.refresh($event.page, true)}></pager>
+<pager total={total}  current={page} on-nav={this.refresh($event.page, true)}></pager>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -40,7 +40,7 @@ var tpl = `
       {/list}
     </tbody>
   </table>
-  <pager total={total} linkTemplate={linkTemplate} current={page} on-nav={this.refresh($event.page)}></pager>
+  <pager total={total} current={page} on-nav={this.refresh($event.page)}></pager>
 </div>
 `;
 
