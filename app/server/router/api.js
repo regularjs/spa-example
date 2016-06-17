@@ -1,7 +1,6 @@
 
 var service = require('../service/index');
 var router = require('koa-router');
-var parse = require('co-body');
 var api = router();
 
 // serviceCall 主要处理

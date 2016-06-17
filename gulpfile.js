@@ -7,16 +7,14 @@ var webpack = require('gulp-webpack');
 var uglify = require('gulp-uglify');
 var gutil = require('gulp-util');
 var through = require('through2');
-var gulpif = require('gulp-if');
 var pkg;
 
 
 var webpackConfig = require('./webpack.config.js');
 
 
-gulp.task('eslint', shell.task([ 'eslint app']));
  
-gulp.task('webpack', ['eslint'], function() {
+gulp.task('webpack',  function() {
 
 
   gulp.src("./app/client/index.js")
@@ -38,7 +36,6 @@ gulp.task('build', ['mcss', 'webpack']);
 
 gulp.task('watch', [ "build"], function(){
 
-  gulp.watch(['app/**/*.js'], ['eslint']);
   gulp.watch(['app/client/mcss/**/*.mcss'], ['mcss']);
 
 })

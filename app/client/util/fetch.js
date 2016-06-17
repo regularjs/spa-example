@@ -1,7 +1,7 @@
 
 var Progress = require('../components/progress.js');
 var fetchBase = require('isomorphic-fetch');
-var _ = require('./helper.js')
+var _ = require('./helper')
 
 
 
