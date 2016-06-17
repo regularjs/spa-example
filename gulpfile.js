@@ -40,6 +40,6 @@ gulp.task('watch', [ "build"], function(){
 
 })
 
-gulp.task('start', shell.task('npm run dev'))
+gulp.task('start', shell.task('npm start '))
 
 gulp.task('default', ['watch', 'start'])
