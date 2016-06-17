@@ -17,7 +17,7 @@ if(location.pathname === '/login'){
 }else{
   // 第二种，即配置单页路由
   var router = require('./router');
-  router.start({ html5: true, view: document.getElementById('app')});
+  router.start({ ssr: true, view: document.getElementById('app')});
 }
 
 
